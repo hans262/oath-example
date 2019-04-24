@@ -21,7 +21,7 @@ Once register, you will get a client ID and a client secret.
 First, clone the repo.
 
 ```bash
-$ git clone git@github.com:ruanyf/node-oauth-demo.git
+$ git clone https://github.com/ounana/oath-example.git
 $ cd node-oauth-demo
 ```
 
