@@ -1,10 +1,11 @@
 {
-  "name": "node-oauth-demo",
+  "name": "oauth-example",
   "version": "1.0.0",
-  "description": "a demo of OAuth2.0 using node",
+  "description": "oauth example",
   "main": "index.js",
-  "repository": "https://githubb.com/ruanyf/node-oauth-demo",
-  "author": "Ruan Yifeng",
+  "scripts": {
+    "start": "node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
