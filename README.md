@@ -1,47 +1,32 @@
-A very simple demo of OAuth 2.0 using Node.js，to add GitHub login to your app and access GitHub API.
+使用github登陆你的应用，OAuth认证教程
 
-![](https://www.wangbase.com/blogimg/asset/201904/bg2019042103.jpg)
-
-
-## Step one: register the app
-
-Register the app on Github : https://github.com/settings/applications/new .
+## 注册应用
+前往注册 : https://github.com/settings/applications/new
 
 ![](https://www.wangbase.com/blogimg/asset/201904/bg2019042102.jpg)
 
-- "Application name" field, enter any name you like.
-- "Homepage URL" field, enter "http://localhost:8080/ ".
-- "callback URL" field, enter "http://localhost:8080/oauth/redirect ".
+- "Application name" : 你的应用名称
+- "Homepage URL" ：输入http://localhost:8080/
+- "callback URL" : 输入http://localhost:8080/oauth/redirect
 
-Once register, you will get a client ID and a client secret.
+注册后你将获得 client_id 和 client_secret
 
-## Step two: get the code
+## 获取代码
 
-First, clone the repo.
+```
+  $ git clone https://github.com/ounana/oath-example.git
+  $ cd oauth-example
 
-```bash
-$ git clone https://github.com/ounana/oath-example.git
-$ cd oauth-example
+  修改配置
+  index.js: 替换 clientID 和 clientSecret 的值。
+
+  安装依赖
+  $ npm install
 ```
 
-Second, modify the config.
-
-- `index.js`: replace the values of the `clientID` and `clientSecret` variables.
-- `public/index.html`: replace the values of the `client_id` variable.
-
-Third, install the dependencies.
-
-```bash
-$ npm install
+## 运行服务
 ```
+  $ node index.js
 
-## Step three: run the server
-
-Now, run the server.
-
-```bash
-$ node index.js
+  在浏览器中访问 http://localhost:8080，然后点击链接登陆你的github。
 ```
-
-Visit http://localhost:8080 in your browser, and click the link to login GitHub.
-
