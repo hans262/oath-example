@@ -8,6 +8,7 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const axios = require('axios')
 const server = createServer(handler)
+
 server.listen(8080, () => {
   console.log('8080 on port')
 })
@@ -50,9 +51,16 @@ async function oauth(req, res) {
       Authorization: `token ${accessToken}`
     }
   })
+
   const user = userResponse.data
-  const { login: name } = user
-  res.end(`Welcome ${name}!`)
+
+  res.write(`<h1>Welcome ${user.name}</h1>`)
+
+  for (key in user) {
+    res.write(`<p><b>${key}:</b> ${user[key]}</p>`)
+  }
+
+  res.end()
 }
 
 function home(req, res) {
